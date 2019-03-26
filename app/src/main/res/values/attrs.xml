@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="ProgressButton">
+        <attr name="progressButtonText" format="string" />
+        <attr name="progressButtonIcon" format="reference" />
+        <attr name="progressButtonBackground" format="reference" />
+        <attr name="progressButtonSmallPadding" format="boolean" />
+    </declare-styleable>
+</resources>

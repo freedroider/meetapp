@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="smallPadding">8dp</dimen>
+    <dimen name="normalPadding">16dp</dimen>
+    <dimen name="smallMargin">8dp</dimen>
+    <dimen name="normalMargin">16dp</dimen>
+    <dimen name="largeMargin">24dp</dimen>
+    <dimen name="largePadding">24dp</dimen>
+    <dimen name="bigMargin">36dp</dimen>
+    <dimen name="galaxyMargin">64dp</dimen>
+    <dimen name="bigPadding">36dp</dimen>
+</resources>

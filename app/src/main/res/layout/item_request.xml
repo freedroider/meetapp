@@ -1,0 +1,90 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvRequestMeetingRoomName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvRequestDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name of Meeting" />
+
+    <TextView
+        android:id="@+id/tvRequestDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/rbColorActivated"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRequestMeetingRoomName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvRequestMeetingRoomName"
+        tools:text="11/03/2018" />
+
+    <TextView
+        android:id="@+id/tvRequestedByLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/requested_by"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestMeetingRoomName" />
+
+    <TextView
+        android:id="@+id/tvRequestParticipantName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvRequestedByLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestMeetingRoomName"
+        tools:text="Participant Name" />
+
+    <com.meetings.android.view.ProgressButton
+        android:id="@+id/btRequestAccept"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btRequestDecline"
+        app:layout_constraintEnd_toStartOf="@+id/btRequestDecline"
+        app:layout_constraintTop_toTopOf="@+id/btRequestDecline"
+        app:progressButtonBackground="?attr/colorAccent"
+        app:progressButtonIcon="@drawable/ic_done"
+        app:progressButtonSmallPadding="true"
+        app:progressButtonText="@string/accept" />
+
+    <com.meetings.android.view.ProgressButton
+        android:id="@+id/btRequestDecline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRequestedByLabel"
+        app:progressButtonBackground="@color/rbColorActivated"
+        app:progressButtonIcon="@drawable/ic_clear"
+        app:progressButtonSmallPadding="true"
+        app:progressButtonText="@string/decline" />
+</android.support.constraint.ConstraintLayout>

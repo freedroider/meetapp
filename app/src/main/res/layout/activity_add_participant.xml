@@ -1,0 +1,110 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.addParticipant.AddParticipantActivity">
+
+    <View
+        android:id="@+id/viewShape"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/shape_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHeader"
+        style="@style/TextAppearance.Shrine.Headline6.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/add_new_participant"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBackIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivBackIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivBackIcon" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ivBackIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/tvInfo"
+        style="@style/TextAppearance.Shrine.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:text="@string/user_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewShape" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tiName"
+        style="@style/Widget.Shrine.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="16dp"
+        android:hint="@string/full_name"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:inputType="text"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tiCost"
+        style="@style/Widget.Shrine.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normalMargin"
+        android:layout_marginStart="@dimen/normalMargin"
+        android:layout_marginTop="@dimen/normalMargin"
+        android:hint="@string/hourly_rate"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiName">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <com.meetings.android.view.ProgressButton
+        android:id="@+id/btAddNewParticipant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:progressButtonBackground="?attr/colorAccent"
+        app:progressButtonIcon="@drawable/ic_done"
+        app:progressButtonText="@string/save" />
+</android.support.constraint.ConstraintLayout>

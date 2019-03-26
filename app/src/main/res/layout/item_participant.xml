@@ -1,0 +1,35 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="24dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="24dp"
+    tools:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvParticipantFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textColor="@color/rbTextColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvParticipantRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Participant FullName" />
+
+    <TextView
+        android:id="@+id/tvParticipantRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/rbColorActivated"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvParticipantFullName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvParticipantFullName"
+        tools:text="€ 20.0" />
+</android.support.constraint.ConstraintLayout>

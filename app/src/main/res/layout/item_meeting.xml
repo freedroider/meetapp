@@ -1,0 +1,86 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tvMeetingName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvMeetingCost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name of Meeting" />
+
+    <TextView
+        android:id="@+id/tvMeetingCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/rbColorActivated"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMeetingName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvMeetingName"
+        tools:text="€ 20.0" />
+
+    <TextView
+        android:id="@+id/tvMeetingStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/status"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeetingName" />
+
+    <TextView
+        android:id="@+id/tvMeetingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway"
+        app:layout_constraintStart_toEndOf="@+id/tvMeetingStatusLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeetingName"
+        tools:text="Created" />
+
+    <TextView
+        android:id="@+id/tvMeetingParticipantsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMeetingStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvMeetingStatus"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/tvMeetingTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="@string/type"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeetingStatusLabel" />
+
+    <TextView
+        android:id="@+id/tvMeetingType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/raleway"
+        app:layout_constraintStart_toEndOf="@+id/tvMeetingTypeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvMeetingStatusLabel"
+        tools:text="Public" />
+</android.support.constraint.ConstraintLayout>
